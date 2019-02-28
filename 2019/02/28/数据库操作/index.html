@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  
+  <title>数据库操作 | Onlyc</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="一、DDL操作1.创建数据库： create database 数据库名； —— 创建指定数据库 create database if not exists 数据库名； —— 如果指定数据库不存在则创建 create database if not exists 数据库名 default charset utf8； —— 创建数据库的时候设置字符编码为utf-8，支持中文输入">
+<meta name="keywords" content="MySQL,操作指令">
+<meta property="og:type" content="article">
+<meta property="og:title" content="数据库操作">
+<meta property="og:url" content="http://yoursite.com/2019/02/28/数据库操作/index.html">
+<meta property="og:site_name" content="Onlyc">
+<meta property="og:description" content="一、DDL操作1.创建数据库： create database 数据库名； —— 创建指定数据库 create database if not exists 数据库名； —— 如果指定数据库不存在则创建 create database if not exists 数据库名 default charset utf8； —— 创建数据库的时候设置字符编码为utf-8，支持中文输入">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-02-28T09:50:47.707Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="数据库操作">
+<meta name="twitter:description" content="一、DDL操作1.创建数据库： create database 数据库名； —— 创建指定数据库 create database if not exists 数据库名； —— 如果指定数据库不存在则创建 create database if not exists 数据库名 default charset utf8； —— 创建数据库的时候设置字符编码为utf-8，支持中文输入">
+  
+    <link rel="alternate" href="/atom.xml" title="Onlyc" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/plugin/bganimation/bg.css">
+  
+
+</head>
+</html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <div class="outer">
+        <div class="widget-wrap mobile-header">
+  <h3 class="widget-title"></h3>
+  <div class="widget">
+    <img class="avatar" src="http://img1.imgtn.bdimg.com/it/u=2123476886,327051845&amp;fm=26&amp;gp=0.jpg">
+    <h2 class="author">CcFiveTwoZero</h2>
+    <h3 class="description">不要脸的美男子</h3>
+    <div class="count-box">
+      <a href="/archives"><div><strong>10</strong><br>文章</div></a>
+      <a href="/categories"><div><strong>11</strong><br>分类</div></a>
+      <a href="/tags"><div><strong>9</strong><br>标签</div></a>
+    </div>
+    <ul class="blog-link">
+     
+          <a href="/" title="Home">
+            <li>主页</li>
+          </a>
+        
+          <a href="/archives" title="Archives">
+            <li>归档</li>
+          </a>
+        
+          <a href="/categories" title="Categories">
+            <li>分类</li>
+          </a>
+        
+          <a href="/tags" title="Tags">
+            <li>标签</li>
+          </a>
+        
+          <a href="/about" title="About">
+            <li>关于</li>
+          </a>
+        
+    </ul>
+  </div>
+</div>
+
+        <section id="main"><article id="post-数据库操作" class="wow slideInRight article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/02/28/数据库操作/" class="article-date">
+  <time class="post-time" datetime="2019-02-28T09:43:33.314Z" itemprop="datePublished">
+    <span class="post-month">2月</span><br>
+    <span class="post-day">28</span>
+  </time>
+</a>
+   
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      数据库操作
+    </h1>
+  
+
+        <div>
+          
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/MySQL/">MySQL</a>,<a class="article-category-link" href="/categories/MySQL/操作指令/">操作指令</a>
+  </div>
+
+          
+              
+
+          
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="一、DDL操作"><a href="#一、DDL操作" class="headerlink" title="一、DDL操作"></a>一、DDL操作</h3><h4 id="1-创建数据库："><a href="#1-创建数据库：" class="headerlink" title="1.创建数据库："></a>1.创建数据库：</h4><ul>
+<li>create database 数据库名； —— 创建指定数据库</li>
+<li>create database if not exists 数据库名； —— 如果指定数据库不存在则创建</li>
+<li>create database if not exists 数据库名 default charset utf8； —— 创建数据库的时候设置字符编码为utf-8，支持中文输入<a id="more"></a>
+<strong>注意：SQL语句中不区分大小写，且设置字符编码的时候utf和8之间不需要用横杠连接。</strong></li>
+</ul>
+<h4 id="2-删除数据库："><a href="#2-删除数据库：" class="headerlink" title="2.删除数据库："></a>2.删除数据库：</h4><p>drop database 数据库名； —— 删除指定数据库<br>drop database if exists 数据库名； —— 如果存在则删除数据库</p>
+<h4 id="3-使用-切换数据库："><a href="#3-使用-切换数据库：" class="headerlink" title="3.使用/切换数据库："></a>3.使用/切换数据库：</h4><p>use 数据库名；</p>
+<h4 id="4-创建表："><a href="#4-创建表：" class="headerlink" title="4.创建表："></a>4.创建表：</h4><h6 id="create-table-表名-（字段名1-类型1-，字段名2-类型2，…）；"><a href="#create-table-表名-（字段名1-类型1-，字段名2-类型2，…）；" class="headerlink" title="create table 表名 （字段名1 类型1 ，字段名2 类型2，…）；"></a>create table 表名 （字段名1 类型1 ，字段名2 类型2，…）；</h6><ul>
+<li><p>a.表名一般需要加前缀‘t’或者‘tb’<br>例如：<br><code>create table t_students;</code></p>
+</li>
+<li><p>b.字段用来确定表中要存储哪些数据，字段名随便命名但是不能是关键字<br>常用数据类型：int—整数，char（数字）—定长字符串，varchar（数字）—不定长字符串，text—字符串（最长255字符），bit—布尔，date—日期，float（size，d）—这里的size和d都有约束效果。<br>例如：<br><code>create table t_students1(stuid int, stuname varchar（数字）, gender bit,birth date)</code><br><strong>常用约束：not null—不能为空，default—设置默认值，unique—值是唯一的</strong></p>
+</li>
+</ul>
+<p>&emsp;<strong>主键约束：primary key（字段名）—主键约束，指的是表中能够唯一标识一条记录的字段，即通过主键值找到表中唯一一条记录</strong></p>
+<p>&emsp;<strong>自动增长：auto_increment—被设置的那个字段会随着添加而值自动增长，也就是说被设置的字段的值是唯一的，即这个字段设置了主键约束且这个字段的类型为整型才可以</strong></p>
+<p>注意：一个字段可以添加多个约束，多个约束之间用空格隔开</p>
+<h4 id="5-修改表"><a href="#5-修改表" class="headerlink" title="5.修改表"></a>5.修改表</h4><ul>
+<li><ol>
+<li>添加字段：alter table 表名 add column 字段名 字段类型 约束;</li>
+</ol>
+</li>
+<li><ol start="2">
+<li>删除字段：alter table 表名 drop  column 字段名;</li>
+</ol>
+</li>
+</ul>
+<h3 id="二、DML（数据操作语言）"><a href="#二、DML（数据操作语言）" class="headerlink" title="二、DML（数据操作语言）"></a>二、DML（数据操作语言）</h3><p> <strong>主要针对数据库中数据的增、删、改、查</strong></p>
+<h5 id="1-插入数据-记录："><a href="#1-插入数据-记录：" class="headerlink" title="1.插入数据/记录："></a>1.插入数据/记录：</h5><ul>
+<li>语法1：依次给表中的字段赋值<br><code>insert into 表名 values(值1， 值2， 值3...)</code></li>
+<li>语法2：按照顺序给指定的字段赋指定的值（可以不给所有字段都赋值）<br><code>insert into 表名(字段1，字段2，字段3...) values(值1， 值2， 值3...)</code></li>
+<li>值的问题：sql中对应的值是数字直接写，字符串需要用单引号或者双引号括起来，bit类型的值只有0和1，时间的内容可以是满足时间格式或者通过时间函数获取的值</li>
+<li>时间函数：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">now()—当前时间</span><br><span class="line">year()—当前年份</span><br><span class="line">month()—当前月份</span><br><span class="line">date(now())—获取当前时间（推荐使用）</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h5 id="2-删除数据-记录"><a href="#2-删除数据-记录" class="headerlink" title="2.删除数据/记录"></a>2.删除数据/记录</h5><ul>
+<li>语法1：删除指定表中所有记录<br><code>delete from 表名;</code></li>
+<li>语法2：删除满足条件的记录<br><code>delete from 表名 where 条件语句;</code></li>
+<li>SQL中的条件语句：<br>&emsp;①  =  ：判断是否相等<br>&emsp;②&lt;&gt;：不等于<br>&emsp;③ &lt;  ：小于<br>&emsp;④ &gt;  ：大于<br>&emsp;⑤&lt;=：小于等于<br>&emsp;⑥&gt;=：大于等于<h5 id="3-修改数据-记录"><a href="#3-修改数据-记录" class="headerlink" title="3.修改数据/记录"></a>3.修改数据/记录</h5></li>
+<li>语法1：将指定表中指定列的所有值修改为新值<br><code>update 表名 set 字段1=新值1 字段2=新值2...;</code></li>
+<li>语法2：将指定表中满足条件的指定行的值修改为新值<br><code>update 表名 set 字段1=新值1 字段2=新值2 ... where 条件语句;</code></li>
+<li>语法3：将以指定字符开头的字段的值修改为新值<br><code>update 表名 set 字段=新值  where 字段 like &#39;字符%&#39;;</code><h6 id="通配符（只针对字符串有效）"><a href="#通配符（只针对字符串有效）" class="headerlink" title="通配符（只针对字符串有效）"></a>通配符（只针对字符串有效）</h6>%：表示任意个数的任意字符（包括0）<br>_ ：表示一个任意字符</li>
+</ul>
+<h5 id="4-获取数据"><a href="#4-获取数据" class="headerlink" title="4.获取数据"></a>4.获取数据</h5><ul>
+<li>a.直接查询：获取所有数据<br><code>select * from 表名;</code></li>
+<li>b.获取指定表中字段对应的指定列的数据<br><code>select 字段1,字段2 from 表名;</code></li>
+<li>c.获取指定表中满足条件的所有数据<br><code>select * from 表名 where 条件语句;</code><h5 id="5-列重命名"><a href="#5-列重命名" class="headerlink" title="5.列重命名"></a>5.列重命名</h5></li>
+<li><p>a.给查询结果中指定的字段重命名（可以部分重命名也可以全部重命名）<br><code>select 字段1 as 新字段1,字段2 as 新字段2... from 表名;</code><br><strong>注意：这里的as可以省略，但是不推荐省略</strong></p>
+</li>
+<li><p>b.查询指定字段，并且判断字段对应的值是0还是1，是1则结果为值1，否则为值2，且字段名为新字段名</p>
+</li>
+</ul>
+<p>MySQL写法：<br><code>select if(字段名,值1,值2) as 新字段名 from 表名;</code><br>通用写法：<br><code>select case 字段 when 1 then 值1 else 值2 end as 新字段名 from 表名;</code></p>
+<h5 id="6-对列进行合并"><a href="#6-对列进行合并" class="headerlink" title="6.对列进行合并"></a>6.对列进行合并</h5><p>将指定的字段合并<br><code>select concat(字段1,字段2...) from 表名;</code><br>注意：数字和字符串数据可以合并，bit类型的数据不可以合并</p>
+<h5 id="7-模糊查询"><a href="#7-模糊查询" class="headerlink" title="7.模糊查询"></a>7.模糊查询</h5><p>即查询的时候通过like条件来指定查询对象。</p>
+<p><strong>sql中支持逻辑运算符and（逻辑与运算）和or（逻辑或运算），not（逻辑非运算）</strong><br><code>select * from 表名 where 字段 like &#39;%%&#39; or 条件语句</code></p>
+<h5 id="8-排序"><a href="#8-排序" class="headerlink" title="8.排序"></a>8.排序</h5><ul>
+<li>按照指定字段的值对查询结果进行升序排序<br><code>select * from 表名 order by 字段;</code></li>
+<li>按照指定字段的值对查询结果进行降序排序<br><code>select * from 表名 order by 字段 desc;</code></li>
+<li>联排：先对查询结果按照指定字段1的排序方式进行排序，然后再对字段2按照指定排序方式排序，越在前面的字段优先级越高。<br><code>select * from 表名 order by 字段1 asc, 字段2 desc...;</code><h5 id="9-限制"><a href="#9-限制" class="headerlink" title="9.限制"></a>9.限制</h5></li>
+<li>获取指定数量条的查询结果<br><code>select * from 表名 limit 数字;</code></li>
+<li>跳过前M条查询结果，取后面的N条查询<br><code>select * from 表名 limit N offset M;</code></li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/02/28/数据库操作/" data-id="cjsogmvt5000ggoverfaaems4" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/MySQL/">MySQL</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/操作指令/">操作指令</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2019/02/28/数据库高级操作/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          数据库高级操作
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2019/02/23/MySQL配置/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">MySQL配置</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    <div class="widget-wrap">
+  <h3 class="widget-title"></h3>
+  <div class="widget">
+    <h1 class="blog-title">Onlyc</h1>
+    <h2 class="blog-subtitle"></h2>
+    <ul class="blog-link">
+     
+          <a href="/" title="Home">
+            <li>主页</li>
+          </a>
+        
+          <a href="/archives" title="Archives">
+            <li>归档</li>
+          </a>
+        
+          <a href="/categories" title="Categories">
+            <li>分类</li>
+          </a>
+        
+          <a href="/tags" title="Tags">
+            <li>标签</li>
+          </a>
+        
+          <a href="/about" title="About">
+            <li>关于</li>
+          </a>
+        
+    </ul>
+  </div>
+</div>
+
+  
+    <div class="widget-wrap">
+  <h3 class="widget-title"></h3>
+  <div class="widget">
+    <img class="avatar" src="http://img1.imgtn.bdimg.com/it/u=2123476886,327051845&amp;fm=26&amp;gp=0.jpg">
+    <h2 class="author">CcFiveTwoZero</h2>
+    <h3 class="description">不要脸的美男子</h3>
+    <div class="count-box">
+      <a href="/archives"><div><strong>10</strong><br>文章</div></a>
+      <a href="/categories"><div><strong>11</strong><br>分类</div></a>
+      <a href="/tags"><div><strong>9</strong><br>标签</div></a>
+    </div>
+
+
+
+    <div class="social-link">
+      
+        <a class="hvr-bounce-in" href="https://github.com/ShootYourHole" target="_blank" title="Github">
+          Github
+        </a>
+      
+    </div>
+
+    <div class="friend-link">
+      <h2>友情链接</h2>
+      
+        <a class="hvr-bounce-in" href="http://blog.shanamaid.top/" target="_blank" title="ShanaMaid">
+          ShanaMaid
+        </a>
+      
+    </div>
+  </div>
+</div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy;2018 - 2019 CcFiveTwoZero<br>
+      由<a href="http://hexo.io/" target="_blank">Hexo</a>强力驱动 | 
+      主题-<a href="https://github.com/ShanaMaid/hexo-theme-shana">Shana</a>
+      
+    </div>
+    
+  </div>
+</footer>
+    </div>
+    
+
+<script src="//apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="//apps.bdimg.com/libs/wow/0.1.6/wow.min.js"></script>
+<script>
+new WOW().init();
+</script>   
+
+
+  <link rel="stylesheet" href="/plugin/fancybox/jquery.fancybox.css">
+  <script src="/plugin/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+  <link rel="stylesheet" href="/plugin/galmenu/GalMenu.css">
+  <script src="/plugin/galmenu/GalMenu.js"></script>
+  <div class="GalMenu GalDropDown">
+      <div class="circle" id="gal">
+        <div class="ring">
+          
+            <a href="/" title class="menuItem">首页</a>
+          
+            <a href="/tags" title class="menuItem">标签</a>
+          
+            <a href="/categories" title class="menuItem">分类</a>
+          
+            <a href="/archives" title class="menuItem">归档</a>
+          
+            <a href="/about" title class="menuItem">关于</a>
+          
+            <a href="/xxxxxxx" title class="menuItem">xxxx</a>
+          
+        </div>
+        
+          <audio id="audio" src="#"></audio>
+        
+      </div> 
+</div>
+<div id="overlay" style="opacity: 1; cursor: pointer;"></div>
+  <script type="text/javascript">var items = document.querySelectorAll('.menuItem');
+    for (var i = 0,
+    l = items.length; i < l; i++) {
+      items[i].style.left = (50 - 35 * Math.cos( - 0.5 * Math.PI - 2 * (1 / l) * i * Math.PI)).toFixed(4) + "%";
+      items[i].style.top = (50 + 35 * Math.sin( - 0.5 * Math.PI - 2 * (1 / l) * i * Math.PI)).toFixed(4) + "%"
+    }</script>
+<script type="text/javascript">
+  $(document).ready(function() {
+    $('body').GalMenu({
+      'menu': 'GalDropDown'
+    })
+  });
+</script>
+
+  <section class="hidden-xs"> 
+  <ul class="cb-slideshow"> 
+    <li><span>苟利</span></li> 
+    <li><span>国家</span></li> 
+    <li><span>生死以</span></li> 
+    <li><span>岂能</span></li> 
+    <li><span>祸福</span></li> 
+    <li><span>趋避之</span></li> 
+  </ul>
+</section>
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>

@@ -3,18 +3,20 @@
 <head><meta name="generator" content="Hexo 3.8.0">
   <meta charset="utf-8">
   
-  <title>Category: vim编辑器 | Onlyc</title>
+  <title>数据库DCL操作 | Onlyc</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="不要脸的美男子">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Onlyc">
-<meta property="og:url" content="http://yoursite.com/categories/Linux/vim编辑器/index.html">
+  <meta name="description" content="1.创建用户/删除用户 a.创建用户语法：create user &amp;#39;用户名&amp;#39;@&amp;#39;登录地址&amp;#39; identified by &amp;#39;登录密码&amp;#39;; b.删除用户语法：drop user &amp;#39;用户名&amp;#39;;">
+<meta name="keywords" content="MySQL,操作指令">
+<meta property="og:type" content="article">
+<meta property="og:title" content="数据库DCL操作">
+<meta property="og:url" content="http://yoursite.com/2019/02/28/数据库DCL操作/index.html">
 <meta property="og:site_name" content="Onlyc">
-<meta property="og:description" content="不要脸的美男子">
+<meta property="og:description" content="1.创建用户/删除用户 a.创建用户语法：create user &amp;#39;用户名&amp;#39;@&amp;#39;登录地址&amp;#39; identified by &amp;#39;登录密码&amp;#39;; b.删除用户语法：drop user &amp;#39;用户名&amp;#39;;">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-02-28T09:56:45.496Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Onlyc">
-<meta name="twitter:description" content="不要脸的美男子">
+<meta name="twitter:title" content="数据库DCL操作">
+<meta name="twitter:description" content="1.创建用户/删除用户 a.创建用户语法：create user &amp;#39;用户名&amp;#39;@&amp;#39;登录地址&amp;#39; identified by &amp;#39;登录密码&amp;#39;; b.删除用户语法：drop user &amp;#39;用户名&amp;#39;;">
   
     <link rel="alternate" href="/atom.xml" title="Onlyc" type="application/atom+xml">
   
@@ -71,42 +73,95 @@
   </div>
 </div>
 
-        <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap animated rubberBand">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2019/02/23/vim编辑器之神/" class="archive-article-date">
-  <time class="post-time" datetime="2019-02-23T02:58:54.222Z" itemprop="datePublished">
+        <section id="main"><article id="post-数据库DCL操作" class="wow slideInRight article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/02/28/数据库DCL操作/" class="article-date">
+  <time class="post-time" datetime="2019-02-28T09:54:57.005Z" itemprop="datePublished">
     <span class="post-month">2月</span><br>
-    <span class="post-day">23</span>
+    <span class="post-day">28</span>
   </time>
 </a>
-      
+   
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/02/23/vim编辑器之神/">Vim编辑器之神</a>
+    <h1 class="article-title" itemprop="name">
+      数据库DCL操作
     </h1>
   
 
-    </header>
+        <div>
+          
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/MySQL/">MySQL</a>,<a class="article-category-link" href="/categories/MySQL/操作指令/">操作指令</a>
   </div>
+
+          
+              
+
+          
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h6 id="1-创建用户-删除用户"><a href="#1-创建用户-删除用户" class="headerlink" title="1.创建用户/删除用户"></a>1.创建用户/删除用户</h6><ul>
+<li>a.创建用户语法：<br><code>create user &#39;用户名&#39;@&#39;登录地址&#39; identified by &#39;登录密码&#39;;</code></li>
+<li>b.删除用户语法：<br><code>drop user &#39;用户名&#39;;</code><a id="more"></a>
+可以填写的登录地址：</li>
+<li>ip地址（指定的地址）</li>
+<li>localhost（数据库本机）</li>
+<li>%（任何地址）<h6 id="2-授权"><a href="#2-授权" class="headerlink" title="2.授权"></a>2.授权</h6></li>
+<li>语法：<br><code>grant 权限类型 on 数据库.对象 to &#39;用户名&#39;;</code></li>
+<li><p>权限类型：<br>&emsp;①select &nbsp;&nbsp;&emsp;&emsp;&emsp;— 查询<br>&emsp;②update &emsp;&emsp;&emsp;— 修改<br>&emsp;③all privilege &emsp;— 所有权限<br>&emsp;④drop &emsp;&emsp;&emsp;&emsp;— 删除<br>&emsp;⑤create &nbsp;&emsp;&emsp;&emsp;— 创建<br>&nbsp;&nbsp;&nbsp;&nbsp;等等……</p>
+</li>
+<li><p>添加所有权限，并且可以给其他用户授权的语法：<br><code>grant all privilege on 数据库.对象 to &#39;用户名&#39; with grant option;</code></p>
+<h6 id="3-召回权限"><a href="#3-召回权限" class="headerlink" title="3.召回权限"></a>3.召回权限</h6></li>
+<li>语法：<br><code>revoke 权限类型 on 数据库.对象 from &#39;用户名&#39;;</code><h6 id="4-事务"><a href="#4-事务" class="headerlink" title="4.事务"></a>4.事务</h6>解释：完成一个操作需要执行多个SQL语句，但是要求这个操作当中只要有一个操作失败，则整个任务失败；如果所有操作都成功，那么整个任务才成功，这就是事务</li>
+<li><code>begin;</code> — 开启事务环境：<br>SQL语句1<br>SQL语句2…</li>
+<li><code>commit;</code> — 提交事务：</li>
+<li><code>rollback;</code> — 事务回滚（放弃begin到commit之间sql语句执行的结果）：</li>
+</ul>
+<p>执行过程：只有begin到commit之间的所有SQL语句执行成功之后，才会执行commit（提交），否则执行rollback。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/02/28/数据库DCL操作/" data-id="cjsogmvsx000dgovefisx8k78" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/MySQL/">MySQL</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/操作指令/">操作指令</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2019/02/28/Linux操作指令/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Linux操作指令
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2019/02/28/数据库高级操作/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">数据库高级操作</div>
+    </a>
+  
+</nav>
+
+  
 </article>
-  
-  
-    </div></section>
-  
+
 
 
 </section>
