@@ -3,20 +3,20 @@
 <head><meta name="generator" content="Hexo 3.8.0">
   <meta charset="utf-8">
   
-  <title>git常用指令 | Onlyc</title>
+  <title>Flask基础 | Onlyc</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="1.基本指令git init                &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; ————  新建git仓库git add 文件/文件夹        &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; ————  将文件添加到缓存区中git add -A                &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;">
-<meta name="keywords" content="服务器,git操作">
+  <meta name="description" content="一、flask环境配置1.使用pycharm创建2.使用virtualenv创建（以下操作均在windows命令提示符下执行）">
+<meta name="keywords" content="框架,Flask">
 <meta property="og:type" content="article">
-<meta property="og:title" content="git常用指令">
-<meta property="og:url" content="http://yoursite.com/2019/02/23/git常用指令/index.html">
+<meta property="og:title" content="Flask基础">
+<meta property="og:url" content="http://yoursite.com/2019/03/04/flask基础/index.html">
 <meta property="og:site_name" content="Onlyc">
-<meta property="og:description" content="1.基本指令git init                &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; ————  新建git仓库git add 文件/文件夹        &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; ————  将文件添加到缓存区中git add -A                &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;">
+<meta property="og:description" content="一、flask环境配置1.使用pycharm创建2.使用virtualenv创建（以下操作均在windows命令提示符下执行）">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-02-23T08:19:03.385Z">
+<meta property="og:updated_time" content="2019-03-04T12:28:59.703Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="git常用指令">
-<meta name="twitter:description" content="1.基本指令git init                &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; ————  新建git仓库git add 文件/文件夹        &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; ————  将文件添加到缓存区中git add -A                &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;">
+<meta name="twitter:title" content="Flask基础">
+<meta name="twitter:description" content="一、flask环境配置1.使用pycharm创建2.使用virtualenv创建（以下操作均在windows命令提示符下执行）">
   
     <link rel="alternate" href="/atom.xml" title="Onlyc" type="application/atom+xml">
   
@@ -73,12 +73,12 @@
   </div>
 </div>
 
-        <section id="main"><article id="post-git常用指令" class="wow slideInRight article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-flask基础" class="wow slideInRight article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2019/02/23/git常用指令/" class="article-date">
-  <time class="post-time" datetime="2019-02-23T02:59:40.524Z" itemprop="datePublished">
-    <span class="post-month">2月</span><br>
-    <span class="post-day">23</span>
+    <a href="/2019/03/04/flask基础/" class="article-date">
+  <time class="post-time" datetime="2019-03-04T12:15:57.752Z" itemprop="datePublished">
+    <span class="post-month">3月</span><br>
+    <span class="post-day">04</span>
   </time>
 </a>
    
@@ -90,14 +90,14 @@
         
   
     <h1 class="article-title" itemprop="name">
-      git常用指令
+      Flask基础
     </h1>
   
 
         <div>
           
   <div class="article-category">
-    <a class="article-category-link" href="/categories/服务器/">服务器</a>,<a class="article-category-link" href="/categories/服务器/git操作/">git操作</a>
+    <a class="article-category-link" href="/categories/框架/">框架</a>,<a class="article-category-link" href="/categories/框架/Flask/">Flask</a>
   </div>
 
           
@@ -109,24 +109,95 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="1-基本指令"><a href="#1-基本指令" class="headerlink" title="1.基本指令"></a>1.基本指令</h3><p><code>git init</code>                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ————  新建git仓库<br><code>git add 文件/文件夹</code>        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ————  将文件添加到缓存区中<br><code>git add -A</code>                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ———— 添加所有内容到缓存区中<br> <a id="more"></a><br><code>git stutas</code>                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ————  查看git状态<br><code>git commit -m  ‘提交信息’</code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ————  将缓存区中的内容全部提交到git本地仓库中  </p>
-<p><code>git log</code>   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;————  查看提交日志<br><code>git reset --hard HEAD</code>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;————  让工作目录中的内容和仓库中的内容保持一致<br><code>git reset --hard HEAD^</code>   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;————  回到上一个版本<br><code>git  reset --hard 版本号</code>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;————  回到指定的版本<br><code>git checkout --文件名</code>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ————  从暂存区中恢复工作目录中的内容(让工作区中的指定文件，回到上次提交的时候的状态)  </p>
-<p><code>git clone &lt;url&gt;</code> ————  将服务器上的项目(仓库)克隆 (使用https地址需要输入密码，使用ssh地址需要添加公钥)  </p>
-<p><code>git remote add origin 地址</code>      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;————  关联远程仓库(只需要关联一次)</p>
-<p><code>git push [-u] origin master</code>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;————  提交(-u在第一次提交分支的时候才用)  </p>
-<h4 id="2-分之管理"><a href="#2-分之管理" class="headerlink" title="2.分之管理"></a>2.分之管理</h4><p>创建仓库会默认给我们创建一个master分支,这个分支一般作为提交和发布分支;开发一般会自己创建一个develop分支，用来开发和测试;多人协作的时候还可能根据不同的人或者(不同的功能)创建不同的分支，用来独立开发  </p>
-<p>常见分支： master(主要是合并develop), develop(主要合并下面的其他分支), 功能/人员分支(开发)  </p>
-<p><code>git branch [-a]</code>   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        - 查看分支<br><code>git branch 分支名</code>        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- 创建分支<br><code>git checkout 分支名</code>        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-   切换分支<br><code>git checkout -b 分支名</code>        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    - 切换并创建新的分支<br><code>git diff 分支1  分支2</code>        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- 查看两个分支之间的差异<br><code>git merge 分支名</code>            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- 让当前分支和指定分支进行合并     </p>
-<p><strong>注意: 切换分之、push、pull，这些操作前要保证工作区是clean</strong>  </p>
-<p><strong>怎么避免冲突：  不要发生多个分支对同一个文件在同一个版本下进行修改(和同伴确认和商量)</strong></p>
+        <h4 id="一、flask环境配置"><a href="#一、flask环境配置" class="headerlink" title="一、flask环境配置"></a>一、flask环境配置</h4><h6 id="1-使用pycharm创建"><a href="#1-使用pycharm创建" class="headerlink" title="1.使用pycharm创建"></a>1.使用pycharm创建</h6><h6 id="2-使用virtualenv创建（以下操作均在windows命令提示符下执行）"><a href="#2-使用virtualenv创建（以下操作均在windows命令提示符下执行）" class="headerlink" title="2.使用virtualenv创建（以下操作均在windows命令提示符下执行）"></a>2.使用virtualenv创建（以下操作均在windows命令提示符下执行）</h6><a id="more"></a>
+<ul>
+<li>第一步：安装</li>
+</ul>
+<p><code>pip install virtualenv</code></p>
+<ul>
+<li>第二步：创建虚拟环境</li>
+</ul>
+<p><code>virtualenv --no-site-packages flaskenv1(此处为环境名)</code></p>
+<ul>
+<li>第三步：激活环境</li>
+</ul>
+<p>&emsp;a.windows下激活：</p>
+<p>&emsp;<code>cd flaskenv1/Scripts    然后执行activate</code></p>
+<p>&emsp;b.Linux/Mac下激活：</p>
+<p>&emsp;<code>cd flaskenv1/Scripts 执行source activate</code></p>
+<ul>
+<li>第四步：退出环境</li>
+</ul>
+<p><code>deactivate</code></p>
+<h4 id="二、flask安装与使用"><a href="#二、flask安装与使用" class="headerlink" title="二、flask安装与使用"></a>二、flask安装与使用</h4><p>1.安装：激活环境</p>
+<p>2.执行如下命令：</p>
+<p><code>pip install flask</code></p>
+<h4 id="三、pip使用"><a href="#三、pip使用" class="headerlink" title="三、pip使用"></a>三、pip使用</h4><ul>
+<li>查询安装的库：</li>
+</ul>
+<p><code>pip list/ pip freeze</code></p>
+<ul>
+<li>安装内容：</li>
+</ul>
+<p><code>pip install xxx</code></p>
+<ul>
+<li>安装文件：</li>
+</ul>
+<p><code>pip install -r requirement.txt</code></p>
+<h4 id="四、启动"><a href="#四、启动" class="headerlink" title="四、启动"></a>四、启动</h4><ul>
+<li>flask自带启动方式</li>
+</ul>
+<p><code>app.run(host, port, debug)</code></p>
+<ul>
+<li>使用flask-script库启动</li>
+</ul>
+<p>&emsp;1.先安装flask-script库</p>
+<p>&emsp;<code>pip install flask-script</code></p>
+<p>&emsp;2.调用Manager</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">from flask_script import Manager </span><br><span class="line">manage = Manager(app) </span><br><span class="line">manage.run()</span><br></pre></td></tr></table></figure>
+<ul>
+<li>启动命令：</li>
+</ul>
+<p><code>python xxx.py runserver -p -h -d</code></p>
+<h4 id="五、路由规则"><a href="#五、路由规则" class="headerlink" title="五、路由规则"></a>五、路由规则</h4><p>1.定义格式：&lt;转换器（类型）：参数名&gt;</p>
+<p>2.转换器类型：</p>
+<p>&emsp;&emsp;int：指定整型</p>
+<p>&emsp;&emsp;string：指定字符串，也是默认的类型</p>
+<p>&emsp;&emsp;float：指定浮点类型</p>
+<p><strong>注意：<a href="string:name" target="_blank" rel="noopener">string:name</a>其实和<name>是一样的</name></strong></p>
+<h4 id="六、请求与响应"><a href="#六、请求与响应" class="headerlink" title="六、请求与响应"></a>六、请求与响应</h4><h6 id="1-请求"><a href="#1-请求" class="headerlink" title="1.请求"></a>1.请求</h6><ul>
+<li>获取参数：</li>
+</ul>
+<p>&emsp;①get请求获取参数：</p>
+<p>&emsp;<code>request.args</code></p>
+<p>&emsp;<code>request.args[key]</code></p>
+<p>&emsp;<code>request.args.get(key)</code></p>
+<p>&emsp;②post请求获取参数：</p>
+<p>&emsp;<code>request.form</code></p>
+<p>&emsp;<code>request.form[key]</code></p>
+<p>&emsp;<code>request.form.get(key)</code></p>
+<ul>
+<li>获取请求路径：</li>
+</ul>
+<p><code>request.path</code></p>
+<ul>
+<li>获取cookies：</li>
+</ul>
+<p><code>request.cookies</code></p>
+<ul>
+<li>获取上传文件：</li>
+</ul>
+<p><code>request.files</code></p>
+<p><code>reuqest.files[key]</code></p>
+<p><code>request.files.get(key)</code></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/02/23/git常用指令/" data-id="cjsubogqc000crcvevauvdtp6" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/03/04/flask基础/" data-id="cjsubogpk0002rcveko54n16t" class="article-share-link">Share</a>
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/git操作/">git操作</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/服务器/">服务器</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Flask/">Flask</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/框架/">框架</a></li></ul>
 
     </footer>
   </div>
@@ -134,19 +205,10 @@
     
 <nav id="article-nav">
   
-    <a href="/2019/02/23/MySQL配置/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          MySQL配置
-        
-      </div>
-    </a>
   
-  
-    <a href="/2019/02/23/Hexo博客搭建/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2019/02/28/Linux操作指令/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">Hexo博客搭建</div>
+      <div class="article-nav-title">Linux操作指令</div>
     </a>
   
 </nav>
